@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
     <script src="https://unpkg.com/scrollreveal"></script>
-<script src="reveal.js" defer></script>
+    <script src="reveal.js" defer></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    
+    <script src="menu.js" defer></script>
 
   </head>
   <body>
@@ -16,7 +20,7 @@
         <div class="flex">
           <a href="index.html"> <img src="TS.svg" alt="" id="headderimg"></a>
 
-          <nav>
+          <nav class="desktop">
            <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#serviços">Serviços</a></li>
@@ -25,9 +29,33 @@
           </nav>
           <div class="btncontato">
             <a href="https://wa.link/da60tp"><button>Contato</button></a>
+
           </div>
         </div>
         <!--flex-->
+
+       <div class="btn-abrirmenu" id="btn-abrirmenu">
+        <i class="bi bi-list"></i>
+       </div> 
+
+<div class="menu-mobile" id="menu-mobile">
+  <div class="btn-fechar"><i class="bi bi-x-lg"></i>
+  </div>
+
+    <nav>
+      <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#serviços">Serviços</a></li>
+     <li><a href="pagesobre.html">Sobre</a></li>
+     <li><a href="https://wa.link/da60tp">Contato</a></li>
+    </ul>
+  </nav>
+  
+</div>
+
+<div class="overlay-menu"></div>
+
+
       </div>
       <!--container-->
     </header>
@@ -36,9 +64,7 @@
         <h1>TS <span>Info</span> Tecnologia <span>A Solução</span> </h1>
     </section>
     <div class="efeito-txt">
-    <div id="titulo">
-      <h2 id="titulo1pd">Suporte Técnico e Manutenção</h2>
-    </div>
+    
 
 
 <section id="serviços">
@@ -46,9 +72,10 @@
 <div class="container1">
   <div class="efeito-img">
   <img src="img/manutencao.png" alt="manutenção">
-</div>
-  
+  </div>
+
   <ul id="listatexto">
+    <h2 id="titulo1">Suporte Técnico e Manutenção</h2>
     <li> <h3 id="tituloli1">Diagnóstico de Problemas</h3>
       <p>Descrição dos serviços de diagnóstico para identificar problemas em hardware, software ou redes.
       </p>
@@ -94,9 +121,7 @@
 </div>
 
 <div class="efeito-txtdev">
-<div id="titulo2">
-  <h2>Desenvolvimento Web</h2>
-</div>
+
 
 <div class="container2">
 
@@ -106,6 +131,7 @@
 
   <ul id="listatexto2">
 <div id="alinhandotextosdev">
+  <h2 id="titulo2">Desenvolvimento Web</h2>
   <li><h3 id="titulodev1">Sites Dinâmicos</h3>
      <p>Criação de sites com uso de HTML5, CSS3 e JAVASCRIPT.</p> 
     </li>
@@ -154,7 +180,7 @@ Design responsivo para garantir que o site seja otimizado para diferentes dispos
 
 <div class="efeito-txtconsultoria">
 <div id="titulo3">
-  <h2> Consultoria Ti</h2>
+ 
 </div>
 
 <div class="container3">
@@ -163,7 +189,8 @@ Design responsivo para garantir que o site seja otimizado para diferentes dispos
   <img src="img/consultoria.png" alt="consultoriadeTI">
 </div>
 
-  <ul id="listatextos3">
+  <ul id="listatexto3">
+    <h2 id="titulo3"> Consultoria Ti</h2>
     <div id="alinhandotextosconsultoria">
 <li><h3 id="tituloconsultoria1">Avaliação Abrangente</h3>
 <p>
@@ -215,37 +242,28 @@ Design responsivo para garantir que o site seja otimizado para diferentes dispos
     </section>
 
     <div class="efeito-txtfinalsite">
-  
-<div class="containerf">
-    <h2 id="temabackup">BACKUP E SEGURANÇA</h2>
-    <p id="temabackup1">Oferecemos soluções robustas de backup e segurança para garantir que seus dispositivos e  dados estejam protegidos e seguros prontos para serem restaurados rapidamente após qualquer incidente, seja um ataque cibernético, uma falha de Hardware ou desastres naturais. Conte conosco para manter seus negócios em pleno funcionamento, mesmo diante dos imprevistos mais desafiadores.</p>
-  </div>
-</div>
-
-
-    <div class="container4">
-  <div id="container-a">  
-    <h3 id="txtbs1">Acesso Remoto Seguro</h3>  
+      <div class="containerf">
+        <h2 id="temabackup">BACKUP E SEGURANÇA</h2>
+        <p id="temabackup1">Oferecemos soluções robustas de backup e segurança para garantir que seus dispositivos e dados estejam protegidos e seguros prontos para serem restaurados rapidamente após qualquer incidente, seja um ataque cibernético, uma falha de Hardware ou desastres naturais. Conte conosco para manter seus negócios em pleno funcionamento, mesmo diante dos imprevistos mais desafiadores.</p>
+      </div>
     
-<p>Nosso serviço de acesso remoto seguro é a chave para uma conexão confiável e protegida com seus sistemas e dados, de qualquer lugar do mundo. Com protocolos avançados de segurança, oferecemos uma solução robusta para empresas que buscam acessar remotamente suas informações de forma segura. Permita que sua equipe trabalhe de forma flexível e eficiente, mantendo sempre a tranquilidade de que suas informações estão protegidas contra ameaças externas.</p>
-  </div>
-
-
-<div id="container-b">
-  <h3 id="txtbs2">Segurança Dos Dispositivos</h3>
-<p>Garanta a segurança inabalável dos seus sistemas e dados com a expertise da nossa empresa de informática. A implementação de firewalls avançados é a nossa resposta proativa contra ameaças cibernéticas, garantindo uma barreira robusta entre a sua rede e possíveis intrusos. Além disso, oferecemos soluções de antivírus de última geração, proporcionando uma defesa abrangente contra malwares e vírus prejudiciais.</p>
-</div>
-
-
-<div id="container-c">
-  
-  <h3 id="txtbs3">Backup na Nuvem</h3>
-  <p>Eleve a segurança dos seus dados e a praticidade do seu negócio com nossas soluções de Backup na Nuvem. Armazenamos suas informações de forma segura, eliminando preocupações com perda de dados devido a falhas técnicas ou eventos inesperados. Com acesso flexível a partir de qualquer lugar, Conte conosco para uma abordagem moderna e confiável em backup, assegurando a integridade e disponibilidade dos seus dados em um ambiente digital em constante evolução.</p>
-</div>
-
-</div>
-
-</div>
+      <div class="container4">
+        <div id="container-a">
+          <h3 id="txtbs1">Acesso Remoto Seguro</h3>
+          <p>Nosso serviço de acesso remoto seguro é a chave para uma conexão confiável e protegida com seus sistemas e dados, de qualquer lugar do mundo. Com protocolos avançados de segurança, oferecemos uma solução robusta para empresas que buscam acessar remotamente suas informações de forma segura. Permita que sua equipe trabalhe de forma flexível e eficiente, mantendo sempre a tranquilidade de que suas informações estão protegidas contra ameaças externas.</p>
+        </div>
+    
+        <div id="container-b">
+          <h3 id="txtbs2">Segurança Dos Dispositivos</h3>
+          <p>Garanta a segurança inabalável dos seus sistemas e dados com a expertise da nossa empresa de informática. A implementação de firewalls avançados é a nossa resposta proativa contra ameaças cibernéticas, garantindo uma barreira robusta entre a sua rede e possíveis intrusos. Além disso, oferecemos soluções de antivírus de última geração, proporcionando uma defesa abrangente contra malwares e vírus prejudiciais.</p>
+        </div>
+    
+        <div id="container-c">
+          <h3 id="txtbs3">Backup na Nuvem</h3>
+          <p>Eleve a segurança dos seus dados e a praticidade do seu negócio com nossas soluções de Backup na Nuvem. Armazenamos suas informações de forma segura, eliminando preocupações com perda de dados devido a falhas técnicas ou eventos inesperados. Com acesso flexível a partir de qualquer lugar, Conte conosco para uma abordagem moderna e confiável em backup, assegurando a integridade e disponibilidade dos seus dados em um ambiente digital em constante evolução.</p>
+        </div>
+      </div>
+    </div>
 
 </section>
 
@@ -253,7 +271,7 @@ Design responsivo para garantir que o site seja otimizado para diferentes dispos
 </div>
 
 <div id="footer1">
-  <p>Ts info &copy; 2023|  Desenvolvido por: Thiago Schug</p>
+  <p>Ts Info &copy; 2023|  Desenvolvido por:&nbsp; Thiago Schug</p>
 </div>
     <script src="script.js"></script>
   </body>

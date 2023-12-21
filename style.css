@@ -1,78 +1,85 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body{
-    scroll-behavior: smooth ; /* Adiciona rolagem suave a toda a página */
+body {
+    scroll-behavior: smooth;
+    /* Adiciona rolagem suave a toda a página */
 }
 
-html{
-  
-    background-color: rgba(0, 0, 0, 0);   
-   
+html {
+
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
 }
 
-.container{
+.container {
     max-width: 1280px;
     margin: auto;
 }
 
-.flex{ /* Alinhando os intens um do lado do outro*/
+.flex {
+    /* Alinhando os intens um do lado do outro*/
     display: flex;
     align-items: center;
-    justify-content: space-between; /*ELementos bem divididos*/
+    justify-content: space-between;
+    /*ELementos bem divididos*/
     margin: -20px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 60px 4%; /*  4% Para que não fique colado e o 60px é para afastar do top do site*/
+    padding: 60px 4%;
+    /*  4% Para que não fique colado e o 60px é para afastar do top do site*/
     transition: 0.5s;
 }
 
-img#headderimg{
+img#headderimg {
     width: 140px;
 }
 
-header ul{
+header nav ul {
     list-style-type: none;
- 
+
 
 }
 
-header ul li{
+header nav.desktop ul li {
     display: inline-block;
     margin: 0 40px;
     font-size: 18px;
-   
-   
+
+
 }
-header ul li a{
+
+header nav.desktop ul li a {
     color: aliceblue;
     text-decoration: none;
     transition: .2s;
     display: block;
     position: relative;
     padding: 1px;
-    
+
 }
-header ul li a:hover{
+
+header nav.desktop ul li a:hover {
     opacity: 1;
     transform: scale(1.2);
 
 }
 
-ul:hover li a{
-opacity: .3;
+nav.desktop ul:hover li a {
+    opacity: .3;
 }
 
-ul li a::before{
+nav.desktop  ul li a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -86,26 +93,32 @@ ul li a::before{
     transition: .2s;
 }
 
-ul li a:hover::before{
+nav.desktop ul li a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
     transition: transform .2s;
-    
+
 }
 
-header.rolagem{
+header.rolagem {
     background-color: rgba(104, 104, 104, 0.838);
     padding: 1px 1%;
 }
 
-header.rolagem a{
+header.rolagem a {
     color: rgb(238, 238, 238);
+}
+
+header nav.desktop {
+    display: block;
 }
 
 
 
+
+
 /* Botão de contato */
-.btncontato button{
+.btncontato button {
     width: 120px;
     height: 40px;
     border: 0;
@@ -113,12 +126,12 @@ header.rolagem a{
     color: aliceblue;
     cursor: pointer;
     transition: .2s;
-   border-radius: 10px;
+    border-radius: 10px;
 }
 
 /* estilização do Backgorund*/
 
-.banner{
+.banner {
     height: 100vh;
     background-image: url(img/bgheadder2.jpeg);
     background-position: center;
@@ -132,68 +145,148 @@ header.rolagem a{
 
 }
 
-.banner h1{
+.banner h1 {
     font-size: 4em;
     color: #3498db;
 }
 
-.banner h1 span{
+.banner h1 span {
     color: #000000;
 }
+
+/*Menu Mobile*/
+.menu-mobile{
+    background-color:#0893f0;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99999;
+    width: 0%;
+    overflow: hidden;
+    transition: .2s;
+}
+
+.menu-mobile.abrir-menumb{
+    width: 70%;
+}
+
+.menu-mobile.abrir-menumb ~ .overlay-menu{
+    display: block;
+}
+
+
+.btn-abrirmenu {
+    display: none; /* Inicialmente, oculta o botão em telas maiores que 1100px */
+    position: fixed;
+    top: 39px;
+    right: 20px; /* Ajuste conforme necessário para o posicionamento desejado */
+    cursor: pointer;
+    font-size: 39px;
+    color: #000000;
+  }
+
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%;
+
+}
+
+.menu-mobile .btn-fechar i{
+    color:#000000;
+    font-size: 30px;
+
+}
+
+.menu-mobile nav ul{
+    text-align: right;
+}
+
+.menu-mobile nav ul li a{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color:#3498db;
+    color:#000000
+}
+
+.overlay-menu{
+    background-color: #00000014;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 888888;
+    display: none;
+}
+/*Fim do Menu mobile*/
+
 
 
 /* Estilização do texto */
 
-section.texto{
+section.texto {
     margin: 100px;
 }
 
 
-.texto{
-    
-        font-family: 'Courier New', Courier, monospace;
-        margin: 20px; /* Ajuste o valor conforme necessário */
+.texto {
 
-    
+    font-family: 'Courier New', Courier, monospace;
+    margin: 20px;
+    /* Ajuste o valor conforme necessário */
+
+
 }
 
-.texto img{
+.texto img {
     height: 390px;
     width: 500px;
 }
 
 .container1 {
     display: flex;
-    flex-direction: row; /* Para colocar a imagem e o texto lado a lado */
-    
-    justify-content: space-around; /* Ou outro valor conforme necessário */
-  padding-bottom: 90px;
-  padding-top: 80px;
-  padding-left: 20px;
-  text-align: center;
+    flex-direction: row;
+    /* Para colocar a imagem e o texto lado a lado */
+    justify-content: space-around;
+    /* Ou outro valor conforme necessário */
+    margin-top: 200px;
+    margin-bottom: 220px;
+    text-align: center;
+    margin-left: 20px;
 }
 
 .container1 img {
     height: 390px;
     width: 500px;
     border-radius: 20px;
+    align-items: center;
 }
 
 .container1 p {
-    margin-left: 15px; /* Ajuste conforme necessário */
+    margin-left: 15px;
+    /* Ajuste conforme necessário */
     text-align: center;
     font-size: 18px;
     font-weight: 100;
 }
 
 
-.container2{
+.container2 {
     display: flex;
-    flex-direction: row-reverse; /* Ou row, dependendo do que deseja */
-    align-items: center; /* Ou flex-start, flex-end, conforme necessário */
+    flex-direction: row-reverse;
+    /* Ou row, dependendo do que deseja */
+    align-items: center;
+    /* Ou flex-start, flex-end, conforme necessário */
     justify-content: space-around;
-    padding-bottom: 200px;
-    padding-right: 20px;
+    margin-bottom: 220px;
+    margin-right: 20px;
 }
 
 .container2 img {
@@ -203,67 +296,70 @@ section.texto{
 }
 
 .container2 p {
-    margin-right: 10px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+    /* Ajuste conforme necessário */
     text-align: center;
     font-size: 18px;
     font-weight: 100;
 }
 
-.container3{
+.container3 {
     display: flex;
-    flex-direction: row; /* Para colocar a imagem e o texto lado a lado */
-    align-items: center; /* Para centralizar verticalmente */
-    justify-content: space-around; /* Ou outro valor conforme necessário */
-    padding-left: 20px;
-    }
-    .container3 img {
-        height: 390px;
-        width: 500px;
-        border-radius: 20px;
-    }
-
-    .container3 p {
-        margin-left: 20px; /* Ajuste conforme necessário */
-        text-align: center;
-        font-size: 18px;
-        font-weight: 100;
-    }
-    
-    section#texto2{
-        margin-top: 200px;
-        text-align: center;
-    }
-
- /* Estilização dos titulos para compor as imagens e os textos*/
-
- div#titulo {
-    margin-top: 20px;
-    text-align: center;
-    display: inline-block; /* Faz com que a div se ajuste ao conteúdo interno */
-    border-bottom: 2px solid #002b83;
-    margin-left: 760px;
+    flex-direction: row;
+    /* Para colocar a imagem e o texto lado a lado */
+    align-items: center;
+    /* Para centralizar verticalmente */
+    justify-content: space-around;
+    /* Ou outro valor conforme necessário */
+    margin-left: 20px;
+    margin-bottom: 220px;
 }
 
-div#titulo2{
-    margin-top: 20px;
-    margin-bottom: 40px;
+.container3 img {
+    height: 390px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+.container3 p {
+    margin-left: 20px;
+    /* Ajuste conforme necessário */
     text-align: center;
-    display: inline-block; /* Faz com que a div se ajuste ao conteúdo interno */
+    font-size: 18px;
+    font-weight: 100;
+}
+
+section#texto2 {
+    margin-top: 200px;
+    text-align: center;
+}
+
+ul#listatexto p {
+    justify-content: center;
+}
+
+/* Estilização dos titulos para compor as imagens e os textos*/
+
+
+
+
+ul#listatexto2 h2#titulo2,
+ul#listatexto3 h2#titulo3 {
+    text-align: center;
+    margin-bottom: 50px;
+    margin-right: 20px;
     border-bottom: 2px solid #002b83;
+    display: inline-block;
     margin-left: 290px;
+
 }
 
-div#titulo3{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    margin-left: 830px;
+ul#listatexto h2#titulo1 {
     text-align: center;
-    display: inline-block; /* Faz com que a div se ajuste ao conteúdo interno */
+    margin-bottom: 50px;
+    padding-left: 200px;
     border-bottom: 2px solid #002b83;
-}
-
-h2#titulo1pd{
-    margin-top: 150px;
+    display: inline-block;
 }
 
 
@@ -273,19 +369,19 @@ h2#titulo1pd{
 
 
 /* Estilização das Ul e das li dentro dos textos com imagens*/
-ul#listatexto{
+ul#listatexto {
     margin-left: 20px;
     list-style-type: none;
     text-align: justify;
 }
 
-ul#listatexto2{
+ul#listatexto2 {
     margin-left: 20px;
     list-style-type: none;
     text-align: justify;
 }
 
-ul#listatexto3{
+ul#listatexto3 {
     margin-right: 20px;
     list-style-type: none;
     text-align: justify;
@@ -294,27 +390,39 @@ ul#listatexto3{
 /*Fim estilização UL LI*/
 
 /*Estilização dos titulos*/
-h3#tituloli1 , h3#tituloli2 , h3#tituloli3 , h3#tituloli4{
+h3#tituloli1,
+h3#tituloli2,
+h3#tituloli3,
+h3#tituloli4 {
     margin-bottom: 8px;
     text-align: center;
 
 }
 
-h3#titulodev1 , h3#titulodev2 , h3#titulodev3 , h3#titulodev4{
+h3#titulodev1,
+h3#titulodev2,
+h3#titulodev3,
+h3#titulodev4 {
     margin-bottom: 8px;
     text-align: center;
 }
 
-h3#tituloconsultoria1 , h3#tituloconsultoria2 , h3#tituloconsultoria3 , h3#tituloconsultoria4 , h3#tituloconsultoria5 , h3#tituloconsultoria6{
+h3#tituloconsultoria1,
+h3#tituloconsultoria2,
+h3#tituloconsultoria3,
+h3#tituloconsultoria4,
+h3#tituloconsultoria5,
+h3#tituloconsultoria6 {
     margin-bottom: 8px;
     text-align: center;
 }
 
 
-div#alinhandotextosdev{
-    text-align: center;
+div#alinhandotextosdev {
+    justify-content: center;
 }
-div#alinhandotextosconsultoria{
+
+div#alinhandotextosconsultoria {
     text-align: center;
     list-style-type: none;
 }
@@ -329,78 +437,92 @@ div#alinhandotextosconsultoria{
     margin-bottom: 200px;
 }
 
-#container-a, #container-b, #container-c {
+#container-a,
+#container-b,
+#container-c {
     display: flex;
-    flex-direction: column; /* Adiciona esta propriedade para colocar os elementos em coluna */
+    flex-direction: column;
+    /* Adiciona esta propriedade para colocar os elementos em coluna */
     justify-content: space-between;
     text-align: justify;
     width: 800px;
     height: 240px;
     margin: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     font-size: 18px;
 
 }
 
 
-h3#txtbs1, h3#txtbs2, h3#txtbs3{
-    text-align: center; /* Centraliza o texto dentro dos h4 */
-   
+h3#txtbs1,
+h3#txtbs2,
+h3#txtbs3 {
+    text-align: center;
+    /* Centraliza o texto dentro dos h4 */
+
     border-bottom: 2px solid #002b83;
 }
 
-h3#txtbs1::after, h3#txtbs2::after, h3#txtbs3::after {
+h3#txtbs1::after,
+h3#txtbs2::after,
+h3#txtbs3::after {
     content: "";
     display: block;
-    border-bottom: 1px solid #002b83; /* Ajuste a largura da borda conforme necessário */
-    margin-top: 5px; /* Ajuste o espaçamento entre o texto e a borda conforme necessário */
+    border-bottom: 1px solid #002b83;
+    /* Ajuste a largura da borda conforme necessário */
+    margin-top: 5px;
+    /* Ajuste o espaçamento entre o texto e a borda conforme necessário */
 }
 
-#temabackup{
+#temabackup {
     border-bottom: 2px solid #002b83;
     margin-bottom: 10px;
 }
 
-#temabackup1{
+#temabackup1 {
     display: inline-block;
-    padding-bottom: 10px; /* Adicione espaço abaixo do título se necessário */
-   text-align: center;
-   padding: 80px;
-   font-size: 22px;
+    padding-bottom: 10px;
+    /* Adicione espaço abaixo do título se necessário */
+    text-align: center;
+    padding: 80px;
+    font-size: 22px;
 }
 
 .containerf {
     display: flex;
-    flex-direction: column; /* Empilha os elementos verticalmente */
-    align-items: center; /* Centraliza verticalmente */
-    margin-top: 250px; /* Ajuste conforme necessário */
+    flex-direction: column;
+    /* Empilha os elementos verticalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin-top: 50px;
+    /* Ajuste conforme necessário */
     margin-bottom: 50px;
 }
 
 
- p#temabackup{
+p#temabackup {
     text-align: center;
     margin-top: 20px;
-    
- }
+
+}
+
 /*Fim da estilização da primeira div*/
 
-/*Estilização do Footer*/
-div#footer1{
-   
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #333; /* Adapte a cor conforme necessário */
-    color: #fff; /* Adapte a cor do texto conforme necessário */
-    text-align: center;
-    padding: 10px;
-}
+
 /*Fim do Footer*/
 
 /*Efeito Scrool review*/
 
-.efeito-txt ,.efeito-img, .efeito-txtdev , .efeito-imgdev, .efeito-txtconsultoria, .efeito-imgconsultoria, .efeito-txtfinalsite , .efeitos-txtultimos1, .efeitos-txtultimos2, .efeitos-txtultimos3 {
+.efeito-txt,
+.efeito-img,
+.efeito-txtdev,
+.efeito-imgdev,
+.efeito-txtconsultoria,
+.efeito-imgconsultoria,
+.efeito-txtfinalsite,
+.efeitos-txtultimos1,
+.efeitos-txtultimos2,
+.efeitos-txtultimos3 {
     visibility: hidden;
 }
 
@@ -409,7 +531,11 @@ div#footer1{
 
 /*Estilização da pagina sobre*/
 
-.primeirotxtsobre , .segundotxtsobre , .terceirotxtsobre, .quartotxtsobre, .quintotxtsobre{
+.primeirotxtsobre,
+.segundotxtsobre,
+.terceirotxtsobre,
+.quartotxtsobre,
+.quintotxtsobre {
     text-align: justify;
     text-align: center;
     margin-top: 50px;
@@ -420,23 +546,205 @@ div#footer1{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-.quintotxtsobre{
-    margin-bottom: 20px;
-}
 
-h3#h3sobre1, h3#h3sobre2 ,h3#h3sobre3 ,h3#h3sobre4, h3#h3sobre5{
+
+
+h3#h3sobre1,
+h3#h3sobre2,
+h3#h3sobre3,
+h3#h3sobre4,
+h3#h3sobre5 {
     margin-bottom: 10px;
 }
 
-p#p1sobre , p#p2sobre , p#p3sobre, p#p4sobre, p#p5sobre{
-font-size: 18px;
+p#p1sobre,
+p#p2sobre,
+p#p3sobre,
+p#p4sobre,
+p#p5sobre {
+    font-size: 18px;
 }
 
-.final{
+.final {
     margin-top: 40px;
     margin-bottom: 50px;
     font-size: 18px;
     text-align: center;
-    
+
 }
+
 /*Fim da pagina sobre*/
+
+/*Estilização do Footer*/
+div#footer1 {
+
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    /* Adapte a cor conforme necessário */
+    color: #fff;
+    /* Adapte a cor do texto conforme necessário */
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    /* Defina a margem superior como 0 para evitar espaçamento extra */
+}
+
+/*Fim do Footer*/
+
+/* Responsivo*/
+
+@media screen and (max-width: 1100px) {
+
+    /*Colunas*/
+    .container1,
+    .container2,
+    .container3,
+    .container4,
+    div#container-a,
+    div#container-b,
+    div#container-c,
+    .containerf {
+        flex-direction: column;
+    }
+
+    ul#listatexto {
+        margin-right: 40px;
+    }
+
+    /*Imagens*/
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .efeito-img,
+    .efeito-imgconsultoria {
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .efeito-imgdev {
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+
+    /*Fim imagens*/
+
+    /*Titulo*/
+    .banner {
+        width: 100%;
+        font-size: 7px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+    }
+
+    ul#listatexto h2#titulo1 {
+        text-align: center;
+        padding-left: 0;
+    }
+    
+    ul#listatexto2 h2#titulo2 {
+        margin-left: 55px;
+    }
+
+    ul#listatexto3 h2#titulo3 {
+        margin-left: 105px;
+    }
+
+    /*Fim titulo*/
+
+
+    /*cabecalho*/
+    header nav.desktop {
+        display: none;
+    }
+
+    header .menu-mobile {
+        display: block;
+    }
+
+    header.rolagem{
+        background-color: #e7070700;
+    }
+
+    .btncontato {
+        display: none;
+    }
+
+    .btn-abrirmenu {
+        display: block; /* Torna o botão visível em telas menores que 1100px */
+      }
+  
+
+    
+   
+
+
+    @media only screen and (max-width: 767px) {
+        .containerf {
+            padding: 0 15px;
+            /* Adapte o espaçamento lateral conforme necessário */
+
+        }
+
+        @media only screen and (max-width: 479px) {
+            .containerf {
+                padding: 0 10px;
+                /* Adapte o espaçamento lateral conforme necessário */
+            }
+        }
+
+        /* Estilo para o título "BACKUP E SEGURANÇA" */
+        #temabackup {
+            font-size: 24px;
+            /* Adapte o tamanho da fonte conforme necessário */
+        }
+
+        /* Estilo para o parágrafo */
+        #temabackup1 {
+            font-size: 18px;
+            /* Adapte o tamanho da fonte conforme necessário */
+            padding: 20px;
+            /* Adapte o espaçamento interno conforme necessário */
+        }
+
+        /* Estilo para as caixas "container-a", "container-b" e "container-c" */
+        #container-a,
+        #container-b,
+        #container-c {
+            width: 100%;
+            max-width: 800px;
+            /* Adapte a largura máxima conforme necessário */
+            margin: 20px 0;
+            padding: 20px;
+            /* Adapte o espaçamento interno conforme necessário */
+            text-align: justify;
+        }
+
+        /* Estilo para os títulos "Acesso Remoto Seguro", "Segurança Dos Dispositivos", "Backup na Nuvem" */
+        h3#txtbs1,
+        h3#txtbs2,
+        h3#txtbs3 {
+            font-size: 20px;
+            /* Adapte o tamanho da fonte conforme necessário */
+        }
+
+        /* Estilo para os parágrafos dentro das caixas "container-a", "container-b" e "container-c" */
+        #container-a p,
+        #container-b p,
+        #container-c p {
+            font-size: 16px;
+            /* Adapte o tamanho da fonte conforme necessário */
+        }
+
+        /*Fim responsivo*/
+    }
+}
+
+
+

@@ -8,6 +8,8 @@
 body {
     scroll-behavior: smooth;
     /* Adiciona rolagem suave a toda a página */
+
+ 
 }
 
 html {
@@ -15,6 +17,7 @@ html {
     background-color: rgba(0, 0, 0, 0);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 16px;
+    
 }
 
 .container {
@@ -42,13 +45,11 @@ header {
 }
 
 img#headderimg {
-    width: 140px;
+    width: 100px;
 }
 
 header nav ul {
     list-style-type: none;
-
-
 }
 
 header nav.desktop ul li {
@@ -79,7 +80,7 @@ nav.desktop ul:hover li a {
     opacity: .3;
 }
 
-nav.desktop  ul li a::before {
+nav.desktop ul li a::before {
     content: '';
     position: absolute;
     top: 0;
@@ -113,10 +114,6 @@ header nav.desktop {
     display: block;
 }
 
-
-
-
-
 /* Botão de contato */
 .btncontato button {
     width: 120px;
@@ -137,12 +134,9 @@ header nav.desktop {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
-
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .banner h1 {
@@ -155,77 +149,70 @@ header nav.desktop {
 }
 
 /*Menu Mobile*/
-.menu-mobile{
-    background-color:#0893f0;
+.menu-mobile {
+    background-color: #0893f0;
     height: 100vh;
     position: fixed;
     top: 0;
     right: 0;
-    z-index: 99999;
-    width: 0%;
+    z-index: 99999999;
+    width:0%;
     overflow: hidden;
-    transition: .2s;
+    transition: .3s;
 }
 
-.menu-mobile.abrir-menumb{
+.menu-mobile.abrirmeumenu{
     width: 70%;
 }
 
-.menu-mobile.abrir-menumb ~ .overlay-menu{
-    display: block;
-}
 
 
-.btn-abrirmenu {
-    display: none; /* Inicialmente, oculta o botão em telas maiores que 1100px */
-    position: fixed;
-    top: 39px;
-    right: 20px; /* Ajuste conforme necessário para o posicionamento desejado */
-    cursor: pointer;
-    font-size: 39px;
-    color: #000000;
-  }
-
-
-.menu-mobile .btn-fechar{
-    padding: 20px 5%;
-
-}
-
-.menu-mobile .btn-fechar i{
-    color:#000000;
-    font-size: 30px;
-
-}
-
-.menu-mobile nav ul{
+.menu-mobile nav ul {
     text-align: right;
 }
 
-.menu-mobile nav ul li a{
+.menu-mobile nav ul li a {
     color: #fff;
     font-size: 20px;
     font-weight: 300;
     padding: 20px 8%;
     display: block;
+    text-decoration: none;
 }
 
-.menu-mobile nav ul li a:hover{
-    background-color:#3498db;
-    color:#000000
+.menu-mobile nav ul li a:hover {
+    background-color: #3498db;
+    color: #000000
 }
 
-.overlay-menu{
-    background-color: #00000014;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 888888;
+.btn-abrirmenu {
     display: none;
+    position: fixed;
+    top: 34px;
+    right: 20px;
+    /* Ajuste conforme necessário para posicionar no canto direito */
+    cursor: pointer;
+
 }
-/*Fim do Menu mobile*/
+
+.btn-abrirmenu i {
+    color: #000000;
+    font-size: 40px;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+
+}
+
+.menu-mobile .btn-fechar i {
+    color: #000000;
+    font-size: 30px;
+
+}
+
+
+
 
 
 
@@ -267,6 +254,7 @@ section.texto {
     width: 500px;
     border-radius: 20px;
     align-items: center;
+    z-index: 1000;
 }
 
 .container1 p {
@@ -619,6 +607,16 @@ div#footer1 {
         max-height: 100%;
     }
 
+    img#headderimg {
+        width: 100px;
+        position: fixed;
+        top: 10px;
+        /* Adjust the top position as needed */
+        left: 2px;
+        /* Adjust the left position as needed */
+    }
+    
+
     .efeito-img,
     .efeito-imgconsultoria {
         margin-right: 15px;
@@ -647,7 +645,7 @@ div#footer1 {
         text-align: center;
         padding-left: 0;
     }
-    
+
     ul#listatexto2 h2#titulo2 {
         margin-left: 55px;
     }
@@ -668,7 +666,7 @@ div#footer1 {
         display: block;
     }
 
-    header.rolagem{
+    header.rolagem {
         background-color: #e7070700;
     }
 
@@ -677,12 +675,13 @@ div#footer1 {
     }
 
     .btn-abrirmenu {
-        display: block; /* Torna o botão visível em telas menores que 1100px */
-      }
-  
+        display: block;
+        /* Torna o botão visível em telas menores que 1100px */
+    }
 
-    
-   
+
+
+
 
 
     @media only screen and (max-width: 767px) {
@@ -745,6 +744,3 @@ div#footer1 {
         /*Fim responsivo*/
     }
 }
-
-
-

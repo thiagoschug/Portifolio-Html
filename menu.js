@@ -10,3 +10,9 @@ btnMenu.addEventListener('click', ()=>{
 menu.addEventListener('click', ()=>{
     menu.classList.remove('abrirmeumenu')
 })
+
+// Exemplo genérico para detecção de clique no botão de contato
+document.getElementById('btn-contato').addEventListener('click', function() {
+    // Lógica de exibição do formulário de contato ou redirecionamento
+    // Certifique-se de que essa lógica seja válida para ambas as situações (desktop e mobile).
+});
